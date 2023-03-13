@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <title>Завдання</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="logo" data-name="p-1">
+        <i class="fas fa-star">Завдання</i></a
+      >
+      <nav class="navbar">
+        <a href="#counter">Підрахунок</a>
+        <a href="#convert">Конвертер</a>
+        <a href="#reverse">Зворотнє</a>
+      </nav>
+    </header>
+    <div class="click__div">
+      <div class="click active" data-target="p-1">
+        <i class="fas fa-times"></i>
+        <img src="./img/1.jpg" alt="Photo" />
+        <h3>Lorem, ipsum.</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae,
+          error labore. Officia sed, impedit nesciunt soluta obcaecati explicabo
+          nihil sequi!
+        </p>
+      </div>
+    </div>
+    <main>
+      <div id="counter">
+        <h1 class="counter__title">Інструмент підрахунку символів</h1>
+        <p class="counter__text">
+          Введіть текст нижче, щоб підрахувати кількість символів:
+        </p>
+        <textarea
+          id="text"
+          placeholder="Введіть або вставте свій текст тут..."
+        ></textarea>
+        <button class="count__btn" onclick="countCharacters()">
+          Підрахунок символів
+        </button>
+        <div id="count"></div>
+      </div>
+
+      <div id="convert">
+        <h1>Конвертер чисел у слова</h1>
+        <form>
+          <label for="number"
+            >Введіть ціле невід’ємне число або число з двома знаками після
+            коми:</label
+          >
+          <br />
+          <input
+            type="text"
+            id="number"
+            name="number"
+            placeholder="Введіть число..."
+          />
+          <br />
+          <button type="button" onclick="convertToWords()">
+            Перетворити в слова
+          </button>
+        </form>
+        <div id="result"></div>
+      </div>
+
+      <div id="reverse">
+        <h1>Зворотнє число</h1>
+        <input
+          class="reverse__input"
+          type="number"
+          id="number_reverce"
+          placeholder="Введіть число..."
+        />
+        <button class="reverse__btn" onclick="reverseNumber()">Reverse</button>
+        <div id="result_reverse"></div>
+      </div>
+    </main>
+  </body>
+  <script src="./js/script.js"></script>
+</html>
